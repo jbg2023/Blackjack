@@ -13,7 +13,7 @@
         * sum value of cards in hand
         * for loop makes variables for UI(DOM elements):
             * player, hand, card values
-4. _(Icebox)_~~Make a bet
+4. _(Icebox)_ ~~Make a bet
     * Start with 100 "chips"
     * Dealer doesn't bet
     * Default minimum 5 "chips" per hand
