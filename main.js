@@ -59,6 +59,7 @@ function init() {
   console.log(deck);
   console.log(dealerHand);
   console.log(playerHand);
+  
 }
 
 function hitMe() {
@@ -72,3 +73,12 @@ function stay() {
 function dealCard() {
   return deck.shift();
 }
+
+function addCards(hand) {
+  let sum = 0;
+  for (let i = 0; i < hand.length; i++) {
+    let card = hand[i];
+    sum += card.Score
+  } return sum;
+}
+console.log(addCards(playerHand))
