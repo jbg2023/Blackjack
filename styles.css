@@ -18,3 +18,7 @@ h1 {
 .btn-group, .btn-primary {
     font-family: 'Cardo', serif;
 }
+
+.btn-warning:active, .btn-success:active, .btn-primary:active {
+    transform: translateY(4px);
+}
