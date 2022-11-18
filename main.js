@@ -59,16 +59,22 @@ function init() {
   shuffle(deck);
   dealerHand = [dealCard(), dealCard()];
   playerHand = [dealCard(), dealCard()];
+  console.log(deck);
+  console.log(dealerHand);
+  console.log(playerHand);
   displayText()
 }
 
 function hitMe() {
   playerHand.push(dealCard());
+  checkForWinner();
+  displayText();
 }
 
 function stay() {
   gameOver = true;
   checkForWinner();
+  displayText();
 }
 
 function dealCard() {
@@ -146,7 +152,7 @@ function displayText() {
     ")\n\n";
 
   if (gameOver) {
-    if (playerWon) {
+    if (winner) {
       display.innerText += "You Win!";
     } else {
       display.innerText += "Dealer Wins!";
