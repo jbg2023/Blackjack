@@ -19,6 +19,19 @@ let hitBtn = document.getElementById('hitBtn');
 let stayBtn = document.getElementById('stayBtn');
 
   /*----- event listeners -----*/
-
+newGame.addEventListener('click', init());
+hitBtn.addEventListener('click', hitMe());
+stayBtn.addEventListener('click', stay());
 
   /*----- functions -----*/
+function init() {
+
+}
+
+function hitMe() {
+
+}
+
+function stay() {
+  
+}
