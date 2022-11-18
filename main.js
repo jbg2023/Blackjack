@@ -47,7 +47,7 @@ stayBtn.addEventListener('click', function() {
         if (cardValue[i] == 'J' || cardValue[i] == 'Q' || cardValue[i] == 'K')
             score = 10;
         if (cardValue[i] == 'A')
-            score = 11;
+            score = 1;
         let card = {Value: cardValue[i], Suit: suit[j], Score: score};
         deck.push(card);
       }
@@ -69,9 +69,15 @@ function dealCard() {
 
 function addCards(hand) {
   let sum = 0;
+  let ace = false;
   for (let i = 0; i < hand.length; i++) {
     let card = hand[i];
-    sum += card.Score
+    sum += card.Score;
+    if (card.Value === 'A') {
+      ace = true;
+    }
+  } if (ace && sum + 10 <= 21) {
+      return sum + 10;
   } return sum;
 }
 
