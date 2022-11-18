@@ -53,13 +53,22 @@ function shuffle() {
 
 function init() {
   deck = makeDeck();
-  console.log(deck)
+  shuffle(deck);
+  dealerHand = [dealCard(), dealCard()];
+  playerHand = [dealCard(), dealCard()];
+  console.log(deck);
+  console.log(dealerHand);
+  console.log(playerHand);
 }
 
 function hitMe() {
-
+  playerHand.push(dealCard());
 }
 
 function stay() {
 
+}
+
+function dealCard() {
+  return deck.shift();
 }
