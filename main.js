@@ -52,14 +52,14 @@ function shuffle() {
 };
 
 function init() {
+  gameStart = true;
+  gameOver = false;
+  winner = false;
   deck = makeDeck();
   shuffle(deck);
   dealerHand = [dealCard(), dealCard()];
   playerHand = [dealCard(), dealCard()];
-  console.log(deck);
-  console.log(dealerHand);
-  console.log(playerHand);
-  
+  displayText()
 }
 
 function hitMe() {
@@ -109,4 +109,48 @@ function checkForWinner() {
     winner = false;
   }
  }
+}
+
+function getCardString(card) {
+  return card.Value + " of " + card.Suit;
+}
+
+function displayText() {
+  if (!gameStart) {
+    display.innerText = "Welcome to BlackJack";
+    return;
+  }
+
+  let dealerCardString = "";
+  for (let i = 0; i < dealerHand.length; i++) {
+    dealerCardString += getCardString(dealerHand[i]) + "\n";
+  }
+
+  let playerCardString = "";
+  for (let i = 0; i < playerHand.length; i++) {
+    playerCardString += getCardString(playerHand[i]) + "\n";
+  }
+
+  getScore();
+
+  display.innerText =
+    "Dealer: \n " +
+    dealerCardString +
+    "(score:" +
+    dealerScore +
+    ")\n\n" +
+    "Player: \n " +
+    playerCardString +
+    "(score:" +
+    playerScore +
+    ")\n\n";
+
+  if (gameOver) {
+    if (playerWon) {
+      display.innerText += "You Win!";
+    } else {
+      display.innerText += "Dealer Wins!";
+    }
+
+  }
 }
