@@ -15,6 +15,8 @@ let display = document.getElementById('display');
 let newGame = document.getElementById('newBtn');
 let hitBtn = document.getElementById('hitBtn');
 let stayBtn = document.getElementById('stayBtn');
+let dealerCards = document.getElementById('dealerCards');
+let playerCards = document.getElementById('playerCards');
 
 newGame.addEventListener('click', function() {
   gameStart = true;
@@ -64,7 +66,7 @@ function shuffle() {
     deck[j] = deck[i];
     deck[i] = temp;
   }
-};
+}
 
 function dealCard() {
   return deck.shift();
@@ -100,12 +102,15 @@ function checkForWinner() {
   if (playerScore > 21) {
     winner = false;
     gameOver = true;
+    tieGame = false;
   } else if (dealerScore > 21) {
     winner = true;
     gameOver = true;
+    tieGame = false;
   } else if (gameOver) {
     if (playerScore > dealerScore) {
     winner = true;
+    tieGame = false;
   } else if (playerScore === dealerScore) {
     gameOver = true;
     tieGame = true;
@@ -139,6 +144,7 @@ function displayText() {
     playerCardString += getCardString(playerHand[i]) + "\n";
   }
   getScore();
+
   display.innerText =
     "Dealer: \n " +
     dealerCardString +
