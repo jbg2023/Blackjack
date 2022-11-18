@@ -113,9 +113,10 @@ function getCardString(card) {
   return card.Value + " of " + card.Suit;
 }
 
+displayText()
 function displayText() {
   if (!gameStart) {
-    display.innerText = "Welcome to BlackJack";
+    display.innerText = "Welcome to Blackjack!\n Click 'New Game' to deal cards.";
     return;
   }
 
