@@ -9,6 +9,7 @@ let gameOver = false;
 let winner = false;
 let dealerScore = 0;
 let playerScore = 0;
+let tieGame = false;
 
 let display = document.getElementById('display');
 let newGame = document.getElementById('newBtn');
@@ -103,7 +104,11 @@ function checkForWinner() {
   } else if (gameOver) {
     if (playerScore > dealerScore) {
     winner = true;
-  } else {
+  } else if (playerScore === dealerScore) {
+    gameOver = true;
+    tieGame = true;
+  }
+    else {
     winner = false;
   }
  }
@@ -144,7 +149,10 @@ function displayText() {
   if (gameOver) {
     if (winner) {
       display.innerText += "You Win!";
-    } else {
+    } else if (tieGame) {
+      display.innerText += "It's a Tie!"
+    }
+      else {
       display.innerText += "Dealer Wins!";
     }
 
