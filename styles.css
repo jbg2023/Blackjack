@@ -7,12 +7,14 @@ body {
     background-size: 100%;
 }
 
-h1 {
+p {
     font-family: 'Smokum', cursive;
+    font-size: 100px;
 }
 
 #display {
     font-family: 'Cardo', serif;
+    font-size: large;
 }
 
 .btn-group, .btn-primary {

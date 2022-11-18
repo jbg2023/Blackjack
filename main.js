@@ -142,12 +142,12 @@ function displayText() {
   display.innerText =
     "Dealer: \n " +
     dealerCardString +
-    "(score:" +
+    "(Total: " +
     dealerScore +
     ")\n\n" +
     "Player: \n " +
     playerCardString +
-    "(score:" +
+    "(Total: " +
     playerScore +
     ")\n\n";
   if (gameOver) {
