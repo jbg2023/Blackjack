@@ -11,3 +11,4 @@
 
 
   /*----- functions -----*/
+  console.log('hi')
