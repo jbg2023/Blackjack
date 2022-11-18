@@ -20,6 +20,8 @@ newGame.addEventListener('click', function() {
   gameStart = true;
   gameOver = false;
   winner = false;
+  hitBtn.style.display = "inline"
+  stayBtn.style.display = "inline"
   deck = makeDeck();
   shuffle(deck);
   dealerHand = [dealCard(), dealCard()];
@@ -122,6 +124,8 @@ displayText()
 function displayText() {
   if (!gameStart) {
     display.innerText = "Welcome to Blackjack!\n Click 'New Game' to deal cards.";
+    hitBtn.style.display = "none"
+    stayBtn.style.display = "none"
     return;
   }
 
@@ -151,10 +155,11 @@ function displayText() {
       display.innerText += "You Win!";
     } else if (tieGame) {
       display.innerText += "It's a Tie!"
-    }
-      else {
+    } else {
       display.innerText += "Dealer Wins!";
     }
+      hitBtn.style.display = "none"
+      stayBtn.style.display = "none"
 
   }
 }
