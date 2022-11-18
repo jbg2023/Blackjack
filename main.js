@@ -67,7 +67,8 @@ function hitMe() {
 }
 
 function stay() {
-
+  gameOver = true;
+  checkForWinner();
 }
 
 function dealCard() {
@@ -85,4 +86,27 @@ function addCards(hand) {
 function getScore() {
   dealerScore = addCards(dealerHand);
   playerScore = addCards(playerHand);
+}
+
+function checkForWinner() {
+  getScore();
+  if (gameOver) {
+    while (dealerScore < 17) {
+      dealerHand.push(dealCard());
+      getScore();
+    }
+  }
+  if (playerScore > 21) {
+    winner = false;
+    gameOver = true;
+  } else if (dealerScore > 21) {
+    winner = true;
+    gameOver = true;
+  } else if (gameOver) {
+    if (playerScore > dealerScore) {
+    winner = true;
+  } else {
+    winner = false;
+  }
+ }
 }
