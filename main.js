@@ -81,4 +81,8 @@ function addCards(hand) {
     sum += card.Score
   } return sum;
 }
-console.log(addCards(playerHand))
+
+function getScore() {
+  dealerScore = addCards(dealerHand);
+  playerScore = addCards(playerHand);
+}
