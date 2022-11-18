@@ -19,9 +19,29 @@ let hitBtn = document.getElementById('hitBtn');
 let stayBtn = document.getElementById('stayBtn');
 
   /*----- event listeners -----*/
-newGame.addEventListener('click', init());
-hitBtn.addEventListener('click', hitMe());
-stayBtn.addEventListener('click', stay());
+newGame.addEventListener('click', function() {
+  gameStart = true;
+  gameOver = false;
+  winner = false;
+  deck = makeDeck();
+  shuffle(deck);
+  dealerHand = [dealCard(), dealCard()];
+  playerHand = [dealCard(), dealCard()];
+  console.log(deck);
+  console.log(dealerHand);
+  console.log(playerHand);
+  displayText()
+});
+hitBtn.addEventListener('click', function() {
+  playerHand.push(dealCard());
+  checkForWinner();
+  displayText();
+});
+stayBtn.addEventListener('click', function() {
+  gameOver = true;
+  checkForWinner();
+  displayText();
+});
 
   /*----- functions -----*/
   function makeDeck() {
@@ -51,31 +71,31 @@ function shuffle() {
   }
 };
 
-function init() {
-  gameStart = true;
-  gameOver = false;
-  winner = false;
-  deck = makeDeck();
-  shuffle(deck);
-  dealerHand = [dealCard(), dealCard()];
-  playerHand = [dealCard(), dealCard()];
-  console.log(deck);
-  console.log(dealerHand);
-  console.log(playerHand);
-  displayText()
-}
+// function init() {
+//   gameStart = true;
+//   gameOver = false;
+//   winner = false;
+//   deck = makeDeck();
+//   shuffle(deck);
+//   dealerHand = [dealCard(), dealCard()];
+//   playerHand = [dealCard(), dealCard()];
+//   console.log(deck);
+//   console.log(dealerHand);
+//   console.log(playerHand);
+//   displayText()
+// }
 
-function hitMe() {
-  playerHand.push(dealCard());
-  checkForWinner();
-  displayText();
-}
+// function hitMe() {
+//   playerHand.push(dealCard());
+//   checkForWinner();
+//   displayText();
+// }
 
-function stay() {
-  gameOver = true;
-  checkForWinner();
-  displayText();
-}
+// function stay() {
+//   gameOver = true;
+//   checkForWinner();
+//   displayText();
+// }
 
 function dealCard() {
   return deck.shift();
