@@ -38,12 +38,22 @@ stayBtn.addEventListener('click', stay());
         //array has keys for value and suit of each card
         let card = {Value: cardValue[i], Suit: suit[j], Score: score};
         deck.push(card);
-      } 
+      }
     } return deck;
 }
 
-function init() {
+function shuffle() {
+  for (let i = 0; i < deck.length; i++) {
+    let j = Math.floor(Math.random() * deck.length);//randomly swap place of cards
+    let temp = deck[j];
+    deck[j] = deck[i];
+    deck[i] = temp;
+  }
+};
 
+function init() {
+  deck = makeDeck();
+  console.log(deck)
 }
 
 function hitMe() {
