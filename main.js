@@ -125,7 +125,7 @@ function getCardString(card) {
   return card.Value + " of " + card.Suit;
 }
 
-displayText()
+// displayText()
 function displayText() {
   if (!gameStart) {
     display.innerText = "Welcome to Blackjack!\n Click 'New Game' to deal cards.";
@@ -133,18 +133,21 @@ function displayText() {
     stayBtn.style.display = "none"
     return;
   }
-  
-  let dealerCardString = "";
+  while (dealerCards.firstChild) {
+    dealerCards.removeChild(dealerCards.lastChild)
+  }
+  // let dealerCardString = "";
   for (let i = 0; i < dealerHand.length; i++) {
     let cardDiv = document.createElement('div');
     cardDiv.className = 'card';
     cardDiv.innerHTML = dealerHand[i].Value + ' ' + dealerHand[i].Suit;
     dealerCards.appendChild(cardDiv);
     // dealerCardString += getCardString(dealerHand[i]);
-
   }
-
-  let playerCardString = "";
+  while (playerCards.firstChild) {
+    playerCards.removeChild(playerCards.lastChild)
+  }
+  // let playerCardString = "";
   for (let i = 0; i < playerHand.length; i++) {
     let cardDiv = document.createElement('div');
     cardDiv.className = 'card';
