@@ -143,6 +143,9 @@ function displayText() {
     cardDiv.innerHTML = dealerHand[i].Value + ' ' + dealerHand[i].Suit;
     dealerCards.appendChild(cardDiv);
     // dealerCardString += getCardString(dealerHand[i]);
+    if (dealerHand[i].Suit == '♦' || dealerHand[i].Suit == '♥') {
+      cardDiv.style.color = 'red';
+    }
   }
   while (playerCards.firstChild) {
     playerCards.removeChild(playerCards.lastChild)
@@ -154,6 +157,9 @@ function displayText() {
     cardDiv.innerHTML = playerHand[i].Value + ' ' + playerHand[i].Suit;
     playerCards.appendChild(cardDiv);
     // playerCardString += getCardString(playerHand[i]);
+    if (playerHand[i].Suit == '♦' || playerHand[i].Suit == '♥') {
+      cardDiv.style.color = 'red';
+    }
   }
   
   getScore();
@@ -170,11 +176,11 @@ function displayText() {
     ")";
   if (gameOver) {
     if (winner) {
-      display.innerText += "You Win!";
+      display.innerText += "\nYou Win!";
     } else if (tieGame) {
-      display.innerText += "It's a Tie!"
+      display.innerText += "\nIt's a Tie!"
     } else {
-      display.innerText += "Dealer Wins!";
+      display.innerText += "\nDealer Wins!";
     }
       hitBtn.style.display = "none"
       stayBtn.style.display = "none"
