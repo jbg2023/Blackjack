@@ -133,29 +133,38 @@ function displayText() {
     stayBtn.style.display = "none"
     return;
   }
-
+  
   let dealerCardString = "";
   for (let i = 0; i < dealerHand.length; i++) {
-    dealerCardString += getCardString(dealerHand[i]) + "\n";
+    let cardDiv = document.createElement('div');
+    cardDiv.className = 'card';
+    cardDiv.innerHTML = dealerHand[i].Value + ' ' + dealerHand[i].Suit;
+    dealerCards.appendChild(cardDiv);
+    // dealerCardString += getCardString(dealerHand[i]);
+
   }
 
   let playerCardString = "";
   for (let i = 0; i < playerHand.length; i++) {
-    playerCardString += getCardString(playerHand[i]) + "\n";
+    let cardDiv = document.createElement('div');
+    cardDiv.className = 'card';
+    cardDiv.innerHTML = playerHand[i].Value + ' ' + playerHand[i].Suit;
+    playerCards.appendChild(cardDiv);
+    // playerCardString += getCardString(playerHand[i]);
   }
+  
   getScore();
-
+  // dealerCards.innerText = dealerCardString;
+  // playerCards.innerText = playerCardString;
   display.innerText =
     "Dealer: \n " +
-    dealerCardString +
     "(Total: " +
     dealerScore +
     ")\n\n" +
     "Player: \n " +
-    playerCardString +
     "(Total: " +
     playerScore +
-    ")\n\n";
+    ")";
   if (gameOver) {
     if (winner) {
       display.innerText += "You Win!";
