@@ -2,6 +2,9 @@
 ![](https://img.shields.io/badge/Version-1.1-success)
 
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![Bootstrap](https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+### Getting Started
+[Play Blackjack Card Game](https://jbg2023.github.io/Blackjack/)
+![Blackjack game](https://github.com/jbg2023/Blackjack/blob/main/screenshot.png)
 - This is a simple blackjack card game.
 - It is 1 player vs. the dealer(computer).
 - Click 'New Game' button to deal cards. 'New Game' button will reset to a new hand at any time.
