@@ -125,7 +125,7 @@ function getCardString(card) {
   return card.Value + " of " + card.Suit;
 }
 
-// displayText()
+displayText()
 function displayText() {
   if (!gameStart) {
     display.innerText = "Welcome to Blackjack!\n Click 'New Game' to deal cards.";
@@ -136,13 +136,12 @@ function displayText() {
   while (dealerCards.firstChild) {
     dealerCards.removeChild(dealerCards.lastChild)
   }
-  // let dealerCardString = "";
+ 
   for (let i = 0; i < dealerHand.length; i++) {
     let cardDiv = document.createElement('div');
     cardDiv.className = 'card';
     cardDiv.innerHTML = dealerHand[i].Value + ' ' + dealerHand[i].Suit;
     dealerCards.appendChild(cardDiv);
-    // dealerCardString += getCardString(dealerHand[i]);
     if (dealerHand[i].Suit == '♦' || dealerHand[i].Suit == '♥') {
       cardDiv.style.color = 'red';
     }
@@ -150,21 +149,16 @@ function displayText() {
   while (playerCards.firstChild) {
     playerCards.removeChild(playerCards.lastChild)
   }
-  // let playerCardString = "";
   for (let i = 0; i < playerHand.length; i++) {
     let cardDiv = document.createElement('div');
     cardDiv.className = 'card';
     cardDiv.innerHTML = playerHand[i].Value + ' ' + playerHand[i].Suit;
     playerCards.appendChild(cardDiv);
-    // playerCardString += getCardString(playerHand[i]);
     if (playerHand[i].Suit == '♦' || playerHand[i].Suit == '♥') {
       cardDiv.style.color = 'red';
     }
   }
-  
   getScore();
-  // dealerCards.innerText = dealerCardString;
-  // playerCards.innerText = playerCardString;
   display.innerText =
     "Dealer: \n " +
     "(Total: " +

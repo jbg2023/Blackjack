@@ -21,6 +21,7 @@ body {
 p {
     font-family: 'Smokum', cursive;
     font-size: 100px;
+    text-decoration:underline;
 }
 
 #display {
