@@ -31,17 +31,17 @@ newGame.addEventListener('click', function() {
   console.log(deck);
   console.log(dealerHand);
   console.log(playerHand);
-  displayText()
+  displayGame()
 });
 hitBtn.addEventListener('click', function() {
   playerHand.push(dealCard());
   checkForWinner();
-  displayText();
+  displayGame();
 });
 stayBtn.addEventListener('click', function() {
   gameOver = true;
   checkForWinner();
-  displayText();
+  displayGame();
 });
 
   function makeDeck() {
@@ -125,8 +125,8 @@ function getCardString(card) {
   return card.Value + " of " + card.Suit;
 }
 
-displayText()
-function displayText() {
+displayGame()
+function displayGame() {
   if (!gameStart) {
     display.innerText = "Welcome to Blackjack!\n Click 'New Game' to deal cards.";
     hitBtn.style.display = "none"
@@ -158,7 +158,8 @@ function displayText() {
       cardDiv.style.color = 'red';
     }
   }
-  getScore();
+  
+getScore();
   display.innerText =
     "Dealer: \n " +
     "(Total: " +
