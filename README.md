@@ -21,3 +21,4 @@
     * Reset (clear all cards) and return to the first screen with starting text when chips run out ('Game Over')
     * Add a minimal 'casino' style music loop, and sound effects for win and game over.
     * Polish up header text with a more 3D look.
+    * Add win condition for Blackjack (player gets Ace and 10/face card on first deal)
