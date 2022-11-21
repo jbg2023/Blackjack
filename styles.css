@@ -17,6 +17,7 @@ body {
     padding: 5px;
     margin: 5px;
     box-shadow: 1px 2px darkred, -.5em 0 .7em olive;
+    font-size: x-large;
 }   
 
 p {
@@ -26,6 +27,7 @@ p {
     -webkit-text-stroke: 1px goldenrod;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     text-transform: uppercase;
+    
 }
 
 #display {
