@@ -25,6 +25,7 @@ p {
     text-decoration:underline;
     -webkit-text-stroke: 1px goldenrod;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    text-transform: uppercase;
 }
 
 #display {
