@@ -16,12 +16,15 @@ body {
     background-color: white;
     padding: 5px;
     margin: 5px;
-}
+    box-shadow: 1px 2px darkred, -.5em 0 .7em olive;
+}   
 
 p {
     font-family: 'Smokum', cursive;
     font-size: 100px;
     text-decoration:underline;
+    -webkit-text-stroke: 1px goldenrod;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 #display {
