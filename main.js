@@ -11,12 +11,12 @@ let dealerScore = 0;
 let playerScore = 0;
 let tieGame = false;
 
-let display = document.getElementById('display');
-let newGame = document.getElementById('newBtn');
-let hitBtn = document.getElementById('hitBtn');
-let stayBtn = document.getElementById('stayBtn');
-let dealerCards = document.getElementById('dealerCards');
-let playerCards = document.getElementById('playerCards');
+const display = document.getElementById('display');
+const newGame = document.getElementById('newBtn');
+const hitBtn = document.getElementById('hitBtn');
+const stayBtn = document.getElementById('stayBtn');
+const dealerCards = document.getElementById('dealerCards');
+const playerCards = document.getElementById('playerCards');
 
 newGame.addEventListener('click', function() {
   gameStart = true;
