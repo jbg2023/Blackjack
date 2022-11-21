@@ -14,4 +14,4 @@
 - First to 21 wins.
 - The default value of an Ace is set at 1. When the sum of each hand is added for total score, the function checks each hand for an Ace card. If an Ace is present and the sum of the hand adds 10 and is still less than or equal to 21, 10 is added to sum. This automatically switches the Ace value to 11(1 + 10).
 - Ties can occur.
-- This is a minimal viable product: there is no betting (soon to come).
+- This is a minimal viable product: there is no betting, I want to do more styling and animation of the cards. (soon to come).

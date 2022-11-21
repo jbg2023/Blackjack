@@ -121,10 +121,6 @@ function checkForWinner() {
  }
 }
 
-function getCardString(card) {
-  return card.Value + " of " + card.Suit;
-}
-
 displayGame()
 function displayGame() {
   if (!gameStart) {
