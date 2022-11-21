@@ -14,4 +14,10 @@
 - First to 21 wins.
 - The default value of an Ace is set at 1. When the sum of each hand is added for total score, the function checks each hand for an Ace card. If an Ace is present and the sum of the hand adds 10 and is still less than or equal to 21, 10 is added to sum. This automatically switches the Ace value to 11(1 + 10).
 - Ties can occur.
-- This is a minimal viable product: there is no betting, I want to do more styling and animation of the cards. (soon to come).
+- This is a minimal viable product. These are some features to add soon: 
+    * Add betting and a picture that changes based on chip amount.
+    * Add more styling and animation of the cards.
+    * Show cards one at a time when being dealt.
+    * Reset (clear all cards) and return to the first screen with starting text when chips run out ('Game Over')
+    * Add a minimal 'casino' style music loop, and sound effects for win and game over.
+    * Polish up header text with a more 3D look.
